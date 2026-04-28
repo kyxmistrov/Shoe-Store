@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background: #fff;
+    color: #222;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 300;
+
+    /*font-style: normal;*/
+}
+.wrapper {
+    /*width:  1280px;*/
+    width:  90%;
+    margin: 50px auto;
+}
+header {
+    position: relative;
+}
+
+header .logo {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+header ul.nav {
+    margin-left: 10px;
+    margin-right: auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header ul.nav li {
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+}
+
+.shop-registration-button{
+    margin-top: 7px;
+}
+
+
+header .shop-heart-button,
+header .shop-cart-button,
+header .shop-registration-button{
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+header .shop-registration-button:hover{
+    color: #ffdc00;
+    transform: scale(1.5);
+}
+
+header .shop-un-registration-button{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+
+}
+header .shop-un-registration-button svg{
+    transition: color, transform 500ms ease;
+}
+
+.shop-un-registration-button p {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.shop-un-registration-button:hover {
+    color: red;
+}
+
+.shop-un-registration-button:hover > svg {
+    color: red;
+    transform: scale(1.5);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+.header-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.item-count-orders {
+    pointer-events: none;
+    position: relative;
+    right: 19px;
+    transform: translate(50%, 50%);
+    background-color: red;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+.item-count-ordersh {
+    pointer-events: none;
+    position: relative;
+    right: 81px;
+    transform: translate(50%, 50%);
+    background-color: red;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #53d569;
+    transform: scale(1.5);
+
+}
+header .shop-heart-button:hover,
+header .shop-heart-button.active {
+    color: #ff416c;
+    transform: scale(1.5);
+}
+header .shop-heart,
+header .shop-cart{
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    /*min-height: 100px;*/
+    background: #fafafa;
+    -webkit-box-shadow: 0px 18px 29px 18px rgba(34, 60, 80, 0.23);
+    -moz-box-shadow: 0px 18px 29px 18px rgba(34, 60, 80, 0.23);
+    box-shadow: 0px 18px 29px 18px rgba(34, 60, 80, 0.23);
+    z-index: 1000;
+
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .shop-heart .empty p,
+header .shop-cart .empty p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop-heart .item,
+header .shop-cart .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+header .shop-heart .item img,
+header .shop-cart .item img{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+header .shop-heart .item h2,
+header .shop-cart .item h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+header  .size{
+    color: black;
+    margin-bottom: 5px;
+    font-size: 15px;
+
+}
+
+header .shop-heart .item p,
+header .shop-cart .item p{
+    color: #5fa36a;
+
+}
+
+
+header .shop-heart .item .delete-icon{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -30px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 25px;
+    transition: color,transform 500ms ease;
+}
+header .shop-cart .item .delete-icon{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -45px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 25px;
+    transition: color,transform 500ms ease;
+}
+header .shop-heart .item .from-heart{
+    color: #5fa36a;
+    float: right;
+    position: relative;
+    top: -30px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 25px;
+    transition: color,transform 500ms ease;
+}
+header .shop-heart .item .from-heart:hover{
+    color: forestgreen;
+    transform: scale(1.5);
+}
+
+header .shop-heart .item .delete-icon:hover,
+header .shop-cart .item .delete-icon:hover{
+    color: #ff0000;
+    transform: scale(1.5);
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+header .shop-cart .summa{
+
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.summa button {
+    float: right;
+    padding: 10px 20px;
+    background-color: #5fa36a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    margin-top: -5px;
+}
+
+.summa button:hover {
+    background-color:  #53d569;
+    transform: scale(1.1);
+}
+.img-slider{
+    margin: 50px 0;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #eaeaea;
+    position: relative;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.categories div {
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.1);
+}
+.full-item{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,0,0,0.8);
+    z-index: 9999;
+    overflow: auto;
+}
+
+.full-item > div{
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+/*Карточки Items*/
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    /*background: #f5f5f5;*/
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    /*border-bottom: 3px solid #5d5d5d;*/
+    -webkit-box-shadow: 0px 30px 61px -7px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 30px 61px -7px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 30px 61px -7px rgba(0, 0, 0, 0.45);
+}
+
+
+
+main .item img,
+.full-item img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+main .item img:hover,
+.full-item img:hover{
+    transform: scale(1.05);
+}
+
+main h2, main p, main b,
+.full-item b, .full-item h2 , .full-item p{
+    margin: 10px 20px;
+    color: #333;
+}
+
+main b,
+.full-item b {
+    color: #5fa36a;
+
+}
+
+/*для каждой карточки Item */
+main .add-to-cart,
+.full-item .add-to-cart{
+    position: relative;
+    margin-left: auto;
+    right: 20px;
+    bottom: 38px;
+    background:linear-gradient(to right, #ff4b2b, #ff416c);
+    width: 38px;
+    height: 38px;
+    text-align:center;
+    line-height: 52px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+
+
+}
+
+.add-to-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+    color: #999999;
+    transition: transform 0.3s ease;
+}
+
+.add-to-heart.in-orderh {
+    color: #ff416c;
+}
+.add-to-heart:hover {
+    color: #ff416c;
+}
+
+.add-to-heart:hover {
+    transform: scale(1.2);
+}
+
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover{
+    transform: scale(1.2)
+}
+
+.quantity {
+    padding-top:5px ;
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    margin: 0 5px;
+}
+
+.quantity button:hover {
+    color: #333;
+}
+
+.quantity span {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.filter {
+    display: flex; /* Добавляем flex-контейнер для строковых элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    margin-bottom: 25px;
+}
+.filter .search {
+    position: relative;
+    margin-left: auto;
+}
+.b-search {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-self: center;
+    margin-left: 5px;
+}
+
+.b-search:hover {
+    transform: scale(1.5);
+}
+
+.filter .search input[type="text"] {
+    width: 0;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: width 0.3s ease, opacity 0.3s ease, margin-right 0.3s ease; /* Добавляем транзицию для плавного изменения ширины, прозрачности и отступа справа */
+    opacity: 0;
+    margin-right: -10px;
+    pointer-events: none;
+}
+
+.filter .search input[type="text"].active {
+    width: 200px;
+    opacity: 1;
+    margin-right: 8px;
+    pointer-events: auto;
+}
+
+
+
+.filter .search .search-icon {
+    position: absolute; /* Абсолютное позиционирование для иконки поиска */
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.3s ease; /* Добавляем плавную анимацию изменения положения иконки */
+}
+.filter .search.active .search-icon {
+    transform: translateX(-100%); /* Сдвигаем иконку влево при активации */
+}
+
+.filter label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.filter .dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 8px 25px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.filter .dropdown .select span {
+    display: flex;
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+
+.filter .dropdown .select i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.filter .dropdown.active .select {
+    border-color: #999;
+
+}
+
+.filter .dropdown.active .select i {
+    transform: rotate(90deg);
+}
+
+.filter .dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    margin-top: 2px;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.filter .dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.filter .dropdown .dropdown-menu li {
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter .dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+.filter .dropdown .select:hover {
+    border-color: #999;
+}
+
+.rating-container {
+    display: flex;
+}
+
+.rait {
+    display: flex;
+    align-items: center;
+}
+
+.radio-star {
+    display: none;
+}
+
+.rait-value {
+    margin-left: auto;
+}
+
+.star {
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.rait {
+    margin-left: 20px;
+}
+
+
+.star-container {
+    position: relative;
+
+}
+
+.partial-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffc107;
+}
+
+.partial-star-filled {
+    width: 100%;
+}
+
+
+
+
+/*size*/
+.size-selection-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 300px;
+    width: 100%;
+}
+
+.size-selection-modal h2 {
+    margin-top: 0;
+}
+
+.size-selection-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.size-selection-modal li {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.size-selection-modal li:hover {
+    background-color: #f0f0f0;
+
+}
+
+.size-selection-modal li.selected{
+    background-color: #d3d3d3;
+    border-radius: 50px;
+}
+
+
+.size-selection-modal button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5fa36a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.size-selection-modal button:hover {
+    background-color: #53d569;
+}
+
+
+/*Размеры в FullItems*/
+.size-selection {
+    margin: 20px;
+}
+
+.size-selection button {
+    margin: 10px 10px 0 0;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.size-selection button:hover {
+    background-color: #f0f0f0;
+}
+
+.size-selection button.selected-size {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.size-selection button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.er-choose-size p {
+    color: red;
+    transition: opacity 0.5s ease;
+}
+.er-choose-size {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.er-choose-size.visible {
+    opacity: 1;
+}
+
+.link-style {
+    text-decoration: none;
+    color: inherit;
+}
+*:focus {
+    outline: none;
+}
+
+
+.presentation3::after{
+    content: 'Footwear';
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #eaeaea;
+}
+
+.presentation4::after{
+    content: 'шагай в ногу со стилем';;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #eaeaea;
+}
+
+.presentation::after{
+    content: 'Лучшие товары';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.presentation2::after{
+    content: 'только для тебя';
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}

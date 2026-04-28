@@ -1,0 +1,121 @@
+
+.checkout-container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    margin: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+
+.order-form {
+    margin-top: 2%;
+    flex: 0 0 35%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.order-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.order-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.order-form input,
+.order-form textarea {
+    width: calc(100% - 40px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.order-form textarea {
+    resize: none;
+    height: 60px;
+}
+
+.order-form button {
+    width: calc(100% - 10px);
+    padding: 12px 24px;
+    background-color: #5fa36a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /*font-size: 16px;*/
+    align-self: center;
+}
+
+.order-form button:hover {
+    background-color:  #53d569;
+}
+
+
+.map-container {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.map-container .yandex-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.map-container .yandex-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+
+
+.back-link-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.back-icon {
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover .back-icon {
+    color: #ff4b2b;
+}
+
+.back-link:hover {
+    color: #ff4b2b;
+}
