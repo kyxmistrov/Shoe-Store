@@ -23,6 +23,19 @@ project/
 ├── DB-postgresq.sql      # База данных (PostgreSQL)
 └── .gitignore
 ```
+---
+## Скрины
+
+### Главная страница
+<img width="661" height="659" alt="image" src="https://github.com/user-attachments/assets/34a2fa7d-7449-4b70-b815-077b907bde65" />
+
+### Карточки товаров
+<img width="678" height="653" alt="image" src="https://github.com/user-attachments/assets/e6ee2c9e-4293-41da-ba66-3f16fef08c4f" />
+
+
+### Вход/Регистрация
+<img width="650" height="488" alt="image" src="https://github.com/user-attachments/assets/6bfd4df3-1a6b-4801-9721-af32bcde5d83" />
+
 
 ---
 
